@@ -1,3 +1,5 @@
+# By Ritik Mehra
+
 import pyautogui as pt
 import keyboard
 from pynput.mouse import Controller, Button
@@ -22,9 +24,10 @@ class whatsapp():
 
         try:
             global x, y
-            
-            # Add Whatsapp_logo.png file directory manually if not working            
-            position = pt.locateOnScreen("Whatsapp-Bot\Watsapp_logo.png", confidence=0.6)
+
+            # Add Whatsapp_logo.png file directory manually if not working
+            position = pt.locateOnScreen(
+                "Whatsapp-Bot\Watsapp_logo.png", confidence=0.6)
             x = position[0]
             y = position[1]
             pt.moveTo(x+30, y+20, duration=0.05)
@@ -32,20 +35,18 @@ class whatsapp():
         except Exception as e:
             print('Exception (open_whatsapp): ', e)
 
-    
-
     def goto_search_button():
         try:
             global x, y
-             # Add Search.png file directory manually if not working
-            position = pt.locateOnScreen("Whatsapp-Bot\Search.png", confidence=0.6)
+            # Add Search.png file directory manually if not working
+            position = pt.locateOnScreen(
+                "Whatsapp-Bot\Search.png", confidence=0.6)
             x = position[0]
             y = position[1]
 
             pt.moveTo(x+10, y+10, duration=0.05)
             mouse.click(Button.left, 1)
             sleep(1)
-
 
             # write your friends name or group name in place of Script Testing
 
@@ -59,7 +60,8 @@ class whatsapp():
         try:
             global x, y
 
-            position = pt.locateOnScreen("Whatsapp-Bot\Message_box.png", confidence=0.6)
+            position = pt.locateOnScreen(
+                "Whatsapp-Bot\Message_box.png", confidence=0.6)
             x = position[0]
             y = position[1]
 
