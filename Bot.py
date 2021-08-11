@@ -27,7 +27,7 @@ class whatsapp():
 
             # Add Whatsapp_logo.png file directory manually if not working
             position = pt.locateOnScreen(
-                "Whatsapp-Bot\Watsapp_logo.png", confidence=0.6)
+                "Images\Message_box.PNG", confidence=0.6)
             x = position[0]
             y = position[1]
             pt.moveTo(x+30, y+20, duration=0.05)
@@ -38,9 +38,11 @@ class whatsapp():
     def goto_search_button():
         try:
             global x, y
+
             # Add Search.png file directory manually if not working
+
             position = pt.locateOnScreen(
-                "Whatsapp-Bot\Search.png", confidence=0.6)
+                "Images\Search.png", confidence=0.6)
             x = position[0]
             y = position[1]
 
@@ -60,8 +62,10 @@ class whatsapp():
         try:
             global x, y
 
+        # Add Message_box.png file directory manually if not working
+
             position = pt.locateOnScreen(
-                "Whatsapp-Bot\Message_box.png", confidence=0.6)
+                "Images\Message_box.png", confidence=0.6)
             x = position[0]
             y = position[1]
 
