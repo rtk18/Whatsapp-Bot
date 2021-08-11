@@ -71,7 +71,7 @@ class whatsapp():
 
             pt.moveTo(x+10, y+10)
             mouse.click(Button.left, 1)
-            keyboard.write("Sending Message using python script!!!!")
+            keyboard.write("Sending Message using python script!!!!")# <------ Default message
             pt.press("enter")
         except Exception as e:
             print('Exception (send_message): ', e)
