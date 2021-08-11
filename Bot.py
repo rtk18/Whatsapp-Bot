@@ -11,8 +11,7 @@ mouse = Controller()
 
 sleep(2)
 
-position1 = pt.locateOnScreen(
-    "D:\Coding\BOT\whatsapp\Watsapp_logo.png", confidence=0.6)
+position1 = pt.locateOnScreen("Whatsapp-Bot\Watsapp_logo.png", confidence=0.6)
 x = position1[0]
 y = position1[1]
 
@@ -23,8 +22,9 @@ class whatsapp():
 
         try:
             global x, y
-            position = pt.locateOnScreen(
-                "D:\Coding\BOT\whatsapp\Watsapp_logo.png", confidence=0.6)
+            
+            # Add Whatsapp_logo.png file directory manually if not working            
+            position = pt.locateOnScreen("Whatsapp-Bot\Watsapp_logo.png", confidence=0.6)
             x = position[0]
             y = position[1]
             pt.moveTo(x+30, y+20, duration=0.05)
@@ -32,26 +32,13 @@ class whatsapp():
         except Exception as e:
             print('Exception (open_whatsapp): ', e)
 
-    def open_group():
-        try:
-            global x, y
-            sleep(10)
-            position = pt.locateOnScreen(
-                "D:\Coding\BOT\whatsapp\Group_image.png", confidence=0.6)
-            x = position[0]
-            y = position[1]
-            pt.moveTo(x+30, y+20, duration=0.05)
-            mouse.click(Button.left, 1)
-            sleep(15)
-        except Exception as e:
-            print('Exception (open_group): ', e)
+    
 
     def goto_search_button():
         try:
             global x, y
-
-            position = pt.locateOnScreen(
-                "D:\Coding\BOT\whatsapp\Search.png", confidence=0.6)
+             # Add Search.png file directory manually if not working
+            position = pt.locateOnScreen("Whatsapp-Bot\Search.png", confidence=0.6)
             x = position[0]
             y = position[1]
 
@@ -60,7 +47,7 @@ class whatsapp():
             sleep(1)
 
 
-# write your friends name or group name in place of Script Testing
+            # write your friends name or group name in place of Script Testing
 
             keyboard.write("Script Testing")  # <--------here
 
@@ -72,8 +59,7 @@ class whatsapp():
         try:
             global x, y
 
-            position = pt.locateOnScreen(
-                "D:\Coding\BOT\whatsapp\Message_box.png", confidence=0.6)
+            position = pt.locateOnScreen("Whatsapp-Bot\Message_box.png", confidence=0.6)
             x = position[0]
             y = position[1]
 
