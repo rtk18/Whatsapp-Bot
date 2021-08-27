@@ -27,7 +27,7 @@ class whatsapp():
 
             # Add Whatsapp_logo.png file directory manually if not working
             position = pt.locateOnScreen(
-                "Images\Message_box.PNG", confidence=0.6)
+                "Images\Watsapp_logo.PNG", confidence=0.6)
             x = position[0]
             y = position[1]
             pt.moveTo(x+30, y+20, duration=0.05)
